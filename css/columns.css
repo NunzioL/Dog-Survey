@@ -1,0 +1,30 @@
+.column {
+  float: left;
+  width: 50%;
+  background-color: lightcyan;
+  padding: 25px;
+}
+
+/* Clear floats after the columns */
+.row {
+  content: "";
+  display: table;
+  clear: both;
+  width:100%;
+  background-color: lightcyan;
+}
+
+.box {
+	border: 3px dashed blue;
+	width: 50%;
+	hieght: auto;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .column { 
+    display: block;
+    width: 100%;
+  }
+}
+
