@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>K9 Breeds</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+		<!--slideshow css-->
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		
+		<!--Bootstrap-->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		
+		<!--font awesome css-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<link rel="stylesheet" href="css/style.css">
+		<script type = "text/javascript" src="javascript/slideshow.js"></script>
+	</head>
+
+	<body onload="carousel()"> <!--carousel lets slideshow start on load-->
+		<!--nav bar-->
+		<div class="topnav">
+			<a class="active" href="#home">Home</a>
+			<a href="about.html">About</a>
+			<a href="quiz-pg.php">Dog Matcher</a>
+			<a href="database.html">Database</a>
+		</div>
+		
+		<!--image slideshow-->
+		<div class ="page-container">
+			<div class="w3-content w3-section" style="min-width:100%;">
+				<!--images from freeimages.com-->
+				<!--images from pexel.com-->
+			  <img class="mySlides" src="images/puppy.png" style = "width:100%; max-height:400px;" alt = "Puppies">
+			  <img class="mySlides" src="images/twig_dogs.png" style = "width:100%; max-height:400px;" alt = "Dogs running with stick">
+			  <img class="mySlides" src="images/snow.png" style = "width:100%; max-height:400px;" alt = "Dogs playing in snow">
+			  <img class="mySlides" src="images/peering.png" style = "width:100%; max-height:400px;" alt = "Dogs peering from above">
+			</div>
+			
+			<!--buttons-->
+			<div class="form-row text-center">
+				<button type="button" class="btn btn-default btn-lg" onclick = "window.location.href = 'quiz-pg.php';">Take the Quiz</button>
+				<br><br>
+				<button type="button" class="btn btn-default btn-lg" onclick = "window.location.href = 'database.html';">Search Database</button>
+			</div>
+
+		</div>
+	</body>
+</html>
