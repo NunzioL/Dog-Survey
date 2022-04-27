@@ -10,12 +10,14 @@
 		
 		<script type = "text/javascript" src="javascript/quiz.js"></script>
 
+		<style type="text/css">
+			img{width:60%;}
+		</style>
 	</head>
 	
 	<body>
 		<?php
 		
-		//connecting to database
 		session_start();
 	
 		$user = "root";
@@ -44,8 +46,9 @@
 			$_SESSION['datab'] = $db;
 		}
 		$db = array();
+		//print_r ($_SESSION['datab']);
 		
-		//checks what question the user is on and uses the appropriate question, answers, questions
+		
 		$db = $_SESSION['datab'];
 		if ($db[0] = null) 
 			$len = 1;
@@ -131,9 +134,6 @@
 			array_push($db, $id);
 		}
 		
-		/* checks if user is at the end of questions, or if they are exiting the quiz
-		if they are, the session variable is erased so that the next time they enter
-		the quiz, it starts back at question 1 */
 		if ($len > 6) {
 			echo "<script>final()</script>";
 			session_destroy();
@@ -146,7 +146,6 @@
 			session_unset();
 		}
 		?>
-		<!--creates the exit button-->
 		<form method = "post">
 		<input id = "exit" type = "submit" value ="Exit" name = "exitTime">
 		</form>
@@ -165,7 +164,7 @@
 		
 		echo "<br>";
 		
-		//update results table, assigns the buttons a value from 1 to 5
+		//stupidly long code to update results table
 		if (isset($_POST['button1'])) {
 			if ($len == 2){
 				$sql = "UPDATE results SET question1='1' WHERE id=0";
@@ -453,8 +452,7 @@
 		echo "<br><br>";
 		$mydb->close();
 		?>
-		
-		<!--the buttons-->
+
 		<form method = "post">
 		<input id = "ch1" class = "chbutton" type = "submit" value = "<?php echo $ans1 ?>"  name = "button1">
 		<input id = "ch2" class = "chbutton" type = "submit" value = "<?php echo $ans2 ?>" name = "button2">
@@ -463,6 +461,7 @@
 		<input id = "ch5" class = "chbutton" type = "submit" value = "<?php echo $ans5 ?>" name = "button5">
 		</form>
 		<br><br>
+		<!--<input id = "nextBtn" class = "nxtbttn" type = "button" value = "Next" onclick = "window.reload()">-->
 
 		</center>
 	</body>
