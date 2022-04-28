@@ -5,8 +5,8 @@ Instructions for operation:
 1. Install all included files.
 2. Install xampp
 3. When running xampp, be sure to press start on apache and mysql
-4. Open localhost/db/index.html on an internet browser
-5. Open the java titled dog_survey_calculations
+4. Open localhost/Dog-Survey-main/index.html on an internet browser
+5. Open the java titled dog_survey_calculations.java
 6. Take the quiz on the webpage
 7. Once finished with the quiz, run the java file
 8. Refresh the webpage
