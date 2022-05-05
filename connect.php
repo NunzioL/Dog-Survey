@@ -1,5 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
 
-<?php // this is for the server
+<!-- THIS FILE IS TO CONNECT TO THE DB -->
+
+    <?php // this is for the server
 
 
 
@@ -7,7 +15,7 @@
 
     $serverName = 'localhost';
     $username = 'root';
-    $password = '';
+    $password = NULL;
     $dbName = 'dogdb';
 
     $con = mysqli_connect(
@@ -18,5 +26,17 @@
         $dbName
     );
 
+    if( mysqli_connect_errno() ){ // if cannot connect
+
+        print('connection not made');
+    }else{
+
+        echo "Database connected to '$dbName' ";
+    }
+
+
 
     ?>
+
+</body>
+</html>

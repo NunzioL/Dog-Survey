@@ -19,7 +19,6 @@
 		</div>
 	
 		<?php
-			//connects to database
 			session_start();
 	
 			$user = "root";
@@ -33,7 +32,6 @@
 			  die( "Failed to connect to MySQL: " . $mydb->connect_error);
 			}
 			
-			//fetching the top 3 dog breeds using the dog id that was outputted from the back-end
 			$end = "SELECT * FROM $table2";
 			$goal = $mydb->query($end) or die($mydb->error);
 			$match = $goal->fetch_assoc();
@@ -76,9 +74,7 @@
 			
 			
 		?>
-		
-		<!--prints out the top 3 dog breeds and links to their 'database' site page-->
-		<!--all images are from pexel.com-->
+	
 		<center><h1>Your results are...</h1>
 			<div class="result1">
 				<?php 
